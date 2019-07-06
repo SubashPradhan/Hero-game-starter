@@ -53,10 +53,13 @@ img_2.alt = 'ImageDagger';
 
 let dagger = document.getElementById('dagger')
 mochaImg.appendChild(img_2)
+img_2.addEventListener('click', addDagger)
 
-function addDagger(dagger, number){
-    dagger = hero.weapon.type;
-    return hero.weapon.damage = number
+// Adding Dagger through picture
+function addDagger(event){
+    hero.inventory.push({type: 'dagger', damage: 2})
+    console.log('this', hero)
+    return true
 }
 
 function equipWeapon() {
