@@ -62,7 +62,11 @@ function addDagger(event){
     return true
 }
 
-function equipWeapon() {
-
+function equipWeapon(object3) {    
+    if(object3.inventory.length === 0){
+        return null
+    }
+    object3.weapon = object3.inventory[0]
+    return true
 }
 
