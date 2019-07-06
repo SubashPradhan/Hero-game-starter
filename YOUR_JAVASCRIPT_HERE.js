@@ -9,3 +9,15 @@ const hero = {
         damage: 2
     }
 }
+
+function rest(){
+
+}
+
+function pickUpItem(){
+
+}
+
+function equipWeapon(){
+    
+}
