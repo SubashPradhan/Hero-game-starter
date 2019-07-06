@@ -35,7 +35,6 @@ mochaImg.appendChild(img)
 
 // Reset health back to 10 onclick
 function resetHealth(event) {
-    console.log('hello', hero.health)
     return hero.health = 10;
 }
 
@@ -58,10 +57,10 @@ img_2.addEventListener('click', addDagger)
 // Adding Dagger through picture
 function addDagger(event){
     hero.inventory.push({type: 'dagger', damage: 2})
-    console.log('this', hero)
     return true
 }
 
+// Adding function for weapon equipment
 function equipWeapon(object3) {    
     if(object3.inventory.length === 0){
         return null
@@ -69,4 +68,21 @@ function equipWeapon(object3) {
     object3.weapon = object3.inventory[0]
     return true
 }
+
+//Third Picture
+let link_3= 'https://img1.cohimg.net/is/image/Coach/58298_liblk_a0?fmt=jpg&wid=680&hei=885&bgc=f0f0f0&fit=vfit&qlt=75'
+const img_3 = document.createElement('img')
+img_3.src = link_3;
+img_3.id = 'bag';
+img_3.alt = 'ImageBag';
+
+let bag = document.getElementById('bag')
+mochaImg.appendChild(img_3)
+ img_3.addEventListener('click', takeWeapon)
+
+
+/// Last function for equipment
+ function takeWeapon(event){
+    hero.weapon = hero.inventory[0]
+ }
 
