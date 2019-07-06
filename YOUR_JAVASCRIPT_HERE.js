@@ -69,7 +69,7 @@ function equipWeapon(object3) {
     return true
 }
 //Third Picture
-let link_3 = 'https://img1.cohimg.net/is/image/Coach/58298_liblk_a0?fmt=jpg&wid=680&hei=885&bgc=f0f0f0&fit=vfit&qlt=75'
+let link_3 = 'https://www.mailingbags.ie/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/h/shirt_in_bag_1_1_1_1_1_2_1.png'
 const img_3 = document.createElement('img')
 img_3.src = link_3;
 img_3.id = 'bag';
