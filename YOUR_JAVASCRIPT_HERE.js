@@ -10,14 +10,40 @@ const hero = {
     }
 }
 
-function rest(){
+function rest(object) {
+    let newHealth = object.health
+    // let newObject = {}
+    if (newHealth == 10) {
+        alert('You are ready to go')
+        return this.health
+    }
+    object.health = 10
+    return object;
 
 }
 
-function pickUpItem(){
+let img = document.createElement('img')
+img.src = "image";
+img.id = 'inn';
+img.alt = 'newImage';
+
+
+const innUI = document.getElementById('inn')
+
+mocha.appendChild(innUI);
+
+
+
+
+
+function pickUpItem(weaopn) {
+    function weapon() {
+        return weapon++;
+    }
 
 }
 
-function equipWeapon(){
-    
+function equipWeapon() {
+
 }
+
