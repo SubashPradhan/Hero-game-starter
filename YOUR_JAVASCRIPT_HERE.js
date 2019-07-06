@@ -10,37 +10,53 @@ const hero = {
     }
 }
 
+//Creating alert and returning object
 function rest(object) {
     let newHealth = object.health
-    // let newObject = {}
     if (newHealth == 10) {
         alert('You are ready to go')
         return this.health
     }
     object.health = 10
     return object;
-
 }
 
-let img = document.createElement('img')
-img.src = "image";
+//Getting and setting image
+const mochaImg = document.getElementById("mocha")
+let link = 'https://cdn.xl.thumbs.canstockphoto.be/3d-man-met-sleutels-stock-illustraties_csp7131107.jpg'
+const img = document.createElement('img')
+img.src = link;
 img.id = 'inn';
 img.alt = 'newImage';
 
+let innUI = document.getElementById('inn')
+img.addEventListener('click', resetHealth)
+mochaImg.appendChild(img)
 
-const innUI = document.getElementById('inn')
+// Reset health back to 10 onclick
+function resetHealth(event) {
+    console.log('hello', hero.health)
+    return hero.health = 10;
+}
 
-mocha.appendChild(innUI);
+// Pickup Item Function
+function pickUpItem(object2, newWeapon) {
+    return object2.inventory.push(newWeapon) 
+}
 
+// Second Picture
+let link_2= 'https://images-na.ssl-images-amazon.com/images/I/41DeqznqpYL._SX425_.jpg'
+const img_2 = document.createElement('img')
+img_2.src = link_2;
+img_2.id = 'dagger';
+img_2.alt = 'ImageDagger';
 
+let dagger = document.getElementById('dagger')
+mochaImg.appendChild(img_2)
 
-
-
-function pickUpItem(weaopn) {
-    function weapon() {
-        return weapon++;
-    }
-
+function addDagger(dagger, number){
+    dagger = hero.weapon.type;
+    return hero.weapon.damage = number
 }
 
 function equipWeapon() {
